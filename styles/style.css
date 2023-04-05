@@ -179,6 +179,7 @@ header {
 .programs {
 	width: 100%;
 	padding: 100px 0;
+	background-color: rgb(251, 245, 236);
 }
 .programs__inner {
 	display: flex;
@@ -206,6 +207,55 @@ header {
 
 .program-item:hover {
 	background-color: rgb(119, 255, 0);
+}
+
+/*! CONTACTS */
+.contacts {
+	width: 100%;
+	height: auto;
+	padding: 150px 0;
+}
+.contacts__inner {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+}
+.contacts-form {
+	margin-left: 10px;
+}
+
+.contacts-form input {
+	background-color: rgb(255 205 205);
+	margin-top: 20px;
+	border-radius: 20px;
+	padding: 20px 15px;
+}
+
+.contacts-form textarea {
+	padding: 20px 15px;
+	margin-top: 20px;
+	background-color: rgb(255 205 205);
+}
+
+.contacts-form p {
+	margin: 20px 0;
+}
+
+.form__inner {
+	display: flex;
+	flex-direction: column;
+}
+.button-submit {
+	width: 150px;
+	padding: 15px 10px;
+	border-radius: 20px;
+	cursor: pointer;
+	background-color: rgb(255, 94, 94);
+	transition: 0.2s;
+}
+
+.button-submit:hover {
+	opacity: 0.5;
 }
 
 /*! FOOTER ================================================= */
@@ -264,6 +314,40 @@ footer {
 }
 
 /*! MEDIA SCREENS ================================================= */
+@media screen and (max-width: 1068px) {
+	.contacts__inner {
+		justify-content: center;
+	}
+	.contacts-form {
+		order: 1;
+		margin-bottom: 20px;
+	}
+	.contacts-map {
+		order: 2;
+	}
+	.button-submit {
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 695px) {
+	.contacts-map {
+		width: 400px;
+		height: 300px;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	.contacts-map {
+		width: 200px;
+		height: 250px;
+	}
+	.contacts-form textarea {
+		width: 170px;
+		height: 50px;
+		margin: 20px auto;
+	}
+}
 @media screen and (max-width: 500px) {
 	header,
 	.header,
@@ -293,6 +377,9 @@ footer {
 	}
 	.header-nav a {
 		font-size: 8px;
+	}
+	.contacts-map {
+		width: 200px;
 	}
 }
 
@@ -335,6 +422,11 @@ footer {
 }
 
 @media screen and (max-width: 265px) {
+	.contacts-map {
+		width: 180px;
+		height: 180px;
+	}
+
 	header,
 	.header,
 	.header__inner {
@@ -349,6 +441,18 @@ footer {
 	}
 	.header-nav a {
 		font-size: 8px;
+	}
+}
+@media screen and (max-width: 225px) {
+	.contacts-form textarea {
+		width: 130px;
+		height: 50px;
+		margin: 20px auto;
+	}
+
+	.contacts-form input {
+		width: 110px;
+		margin: 20px auto 0px;
 	}
 }
 
