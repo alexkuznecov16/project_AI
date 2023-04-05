@@ -137,7 +137,7 @@ header {
 	}
 }
 
-/*! PROGRAMS ================================================= */
+/*! ABOUT ================================================= */
 .about {
 	width: 100%;
 	padding: 200px 0;
@@ -175,41 +175,54 @@ header {
 }
 
 /*! PROGRAMS ================================================= */
-
-.programs {
+.projects {
 	width: 100%;
 	padding: 100px 0;
-	background-color: rgb(251, 245, 236);
-}
-.programs__inner {
 	display: flex;
 	justify-content: center;
-	flex-wrap: wrap;
-	gap: 20px;
+	align-items: center;
 }
-.program-item {
-	width: 250px;
+
+.tr:hover {
+	background-color: aqua;
+}
+
+td:hover {
+	background-color: red;
+}
+
+th:hover {
+	background-color: gold;
+}
+
+table,
+th,
+tr,
+td {
+	border: 1px solid;
+	border-collapse: collapse;
+	padding: 5px 15px;
+	transition: 0.2s linear;
+}
+
+table {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	text-align: center;
-	border: 2px solid red;
-	border-radius: 5px;
-	padding: 6px 8px;
-	row-gap: 10px;
+	outline: none;
+	border: none;
+}
+
+table img {
+	width: 100px;
+}
+table td {
+	max-width: 300px;
 	cursor: pointer;
-	transition: 0.2s linear;
-}
-.program-item img {
-	width: 150px;
 }
 
-.program-item:hover {
-	background-color: rgb(119, 255, 0);
-}
-
-/*! CONTACTS */
+/*! CONTACTS ================================================= */
 .contacts {
 	width: 100%;
 	height: auto;
@@ -337,17 +350,6 @@ footer {
 	}
 }
 
-@media screen and (max-width: 340px) {
-	.contacts-map {
-		width: 200px;
-		height: 250px;
-	}
-	.contacts-form textarea {
-		width: 170px;
-		height: 50px;
-		margin: 20px auto;
-	}
-}
 @media screen and (max-width: 500px) {
 	header,
 	.header,
@@ -363,6 +365,22 @@ footer {
 
 	.socials {
 		padding: 0;
+	}
+
+	.projects table td {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 340px) {
+	.contacts-map {
+		width: 200px;
+		height: 250px;
+	}
+	.contacts-form textarea {
+		width: 170px;
+		height: 50px;
+		margin: 20px auto;
 	}
 }
 
@@ -380,6 +398,13 @@ footer {
 	}
 	.contacts-map {
 		width: 200px;
+	}
+	.projects table td {
+		font-size: 8px;
+	}
+
+	.projects table img {
+		width: 50px;
 	}
 }
 
@@ -404,16 +429,6 @@ footer {
 	}
 	.about-text {
 		font-size: 10px;
-	}
-
-	.program-item {
-		width: 150px;
-	}
-	.program-item img {
-		width: 100px;
-	}
-	.program-item span {
-		font-size: 12px;
 	}
 
 	.socials .item span {
